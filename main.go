@@ -1,13 +1,13 @@
 package main
 
-import(
-"os"
-"github.com/gin-gonic/gin"
-"golang-restaurant-management/database"
-"golang-restaurant-management/routes"
-"golang-restaurant-management/middleware"
-"golang-restaurant-management/mongo"
+import (
+	"golang-restaurant-management/database"
+	"golang-restaurant-management/middleware"
+	"golang-restaurant-management/mongo"
+	"golang-restaurant-management/routes"
+	"os"
 
+	"github.com/gin-gonic/gin"
 )
 
 var foodCollection *mongo.Collection = database.OpenCollection(database.Client, "food")
